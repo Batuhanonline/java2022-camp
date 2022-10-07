@@ -1,0 +1,15 @@
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\bin\Debug\net6.0\OOPDers.exe
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\bin\Debug\net6.0\OOPDers.deps.json
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\bin\Debug\net6.0\OOPDers.runtimeconfig.json
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\bin\Debug\net6.0\OOPDers.dll
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\bin\Debug\net6.0\OOPDers.pdb
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\OOPDers.csproj.AssemblyReference.cache
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\OOPDers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\OOPDers.AssemblyInfoInputs.cache
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\OOPDers.AssemblyInfo.cs
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\OOPDers.csproj.CoreCompileInputs.cache
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\OOPDers.dll
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\refint\OOPDers.dll
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\OOPDers.pdb
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\OOPDers.genruntimeconfig.cache
+C:\Users\speed\Documents\Projects\java2022\hafta3odev\oop\OOPDers\obj\Debug\net6.0\ref\OOPDers.dll
