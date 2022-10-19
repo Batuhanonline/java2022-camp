@@ -69,27 +69,30 @@ Aynı zamanda where sorgusu kullanılabilir. Products tablosunda CategoryID si 1
 <br>
 
 ### Group by
-- ``Select CategoryID, count(*) from Products group by CategoryID``
+- ``Select CategoryID, count(*) from Products group by CategoryID``<br>
+Aynı zamanda where sorgusu kullanılabilir. Products tablosunda CategoryID si 1 olan kaç satır veri olduğunu geri dönecektir.
+<br>
+
 - ``Select CategoryID, count(*) from Products group by CategoryID having count(*)<10``
 - ``Select CategoryID, count(*) from Products where UnitPrice > 20 group by CategoryID having count(*)<10``
 
 
+### inner join
+- ``Select * from Products inner join Categories on Products.CategoryID = Categories.CategoryID``
 
-Select * from Products inner join Categories on Products.CategoryID = Categories.CategoryID
+- ``Select Products.ProductID, Products.ProductName, Products.UnitPrice, Categories.CategoryName from Products inner join Categories on Products.CategoryID = Categories.CategoryID``
 
-Select Products.ProductID, Products.ProductName, Products.UnitPrice, Categories.CategoryName from Products inner join Categories on Products.CategoryID = Categories.CategoryID
-
-Select Products.ProductID, Products.ProductName, Products.UnitPrice, Categories.CategoryName from Products inner join Categories on Products.CategoryID = Categories.CategoryID where Products.UnitPrice > 10
+- ``Select Products.ProductID, Products.ProductName, Products.UnitPrice, Categories.CategoryName from Products inner join Categories on Products.CategoryID = Categories.CategoryID where Products.UnitPrice > 10``
 
 -- DTO Data Transformation Object
 
 -- inner join sadece iki tabloda eşleşen data varsa getirme işlemi yapar
 
+### left join
+``Select * from Products p left join [Order Details] od on p.ProductID = od.ProductID``
 
-Select * from Products p left join [Order Details] od on p.ProductID = od.ProductID
-
-Select * from Customers c left join Orders o on c.CustomerID = o.CustomerID where o.CustomerID is null
+``Select * from Customers c left join Orders o on c.CustomerID = o.CustomerID where o.CustomerID is null``
 
 --birden fazla tabloyu join etme
 
-Select * from Products p inner join [Order Details] od on p.ProductID = od.ProductID inner join Orders o on o.OrderID = od.OrderID
+``Select * from Products p inner join [Order Details] od on p.ProductID = od.ProductID inner join Orders o on o.OrderID = od.OrderID``
