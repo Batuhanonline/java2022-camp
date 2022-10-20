@@ -69,30 +69,58 @@ Aynı zamanda where sorgusu kullanılabilir. Products tablosunda CategoryID si 1
 <br>
 
 ### Group by
-- ``Select CategoryID, count(*) from Products group by CategoryID``<br>
-Aynı zamanda where sorgusu kullanılabilir. Products tablosunda CategoryID si 1 olan kaç satır veri olduğunu geri dönecektir.
+- ``Select CategoryID, count(*) from Products group by CategoryID``
+<br>
+Group by komutu ile aynı değerlere sahip verileri gruplayabiliriz. Yazdığımız komut ile kategori id ve yanına o kategoride kaç ürün olduğunu yazdıracaktır.
 <br>
 
 - ``Select CategoryID, count(*) from Products group by CategoryID having count(*)<10``
+<br>
+Having komutu gruplandırılan veriler üzerinde fonksiyonlar ile yazılacak koşul ifadelerininn gerçekleştirilmesi için kullanılır. Group by komutu ile birlikte kullanılabilir.
+<br>
+
 - ``Select CategoryID, count(*) from Products where UnitPrice > 20 group by CategoryID having count(*)<10``
+<br>
+Having komutu where komutu ile kullanıldığı zamanlarda ilk önce where komutu çalışır.
+<br>
 
-
-### inner join
+### Inner join
 - ``Select * from Products inner join Categories on Products.CategoryID = Categories.CategoryID``
+<br>
+İki ilişkili tabloyu birleştirme işlemini inner join ile yapmaktayız. 
+<br>
 
 - ``Select Products.ProductID, Products.ProductName, Products.UnitPrice, Categories.CategoryName from Products inner join Categories on Products.CategoryID = Categories.CategoryID``
+<br>
+Çağıralacak olan sütunları seçebiliriz.
+<br>
 
 - ``Select Products.ProductID, Products.ProductName, Products.UnitPrice, Categories.CategoryName from Products inner join Categories on Products.CategoryID = Categories.CategoryID where Products.UnitPrice > 10``
+<br>
+Where komutu ile birlikte kullanılabilirler.
+<br>
 
--- DTO Data Transformation Object
+- Birden fazla tabloyu join etme
 
--- inner join sadece iki tabloda eşleşen data varsa getirme işlemi yapar
+- ``Select * from Products p inner join [Order Details] od on p.ProductID = od.ProductID inner join Orders o on o.OrderID = od.OrderID``
+<br>
+Yukarıdaki sorgu komutunda olduğu gibi 3 farklı ilişkili tabloyu birbirine bağlayıp yeni tablo oluşturabiliriz.
+<br>
 
-### left join
-``Select * from Products p left join [Order Details] od on p.ProductID = od.ProductID``
+- DTO Data Transformation Object
 
-``Select * from Customers c left join Orders o on c.CustomerID = o.CustomerID where o.CustomerID is null``
+- inner join sadece iki tabloda eşleşen data varsa getirme işlemi yapar
 
---birden fazla tabloyu join etme
+### Left join
+- ``Select * from Products p left join [Order Details] od on p.ProductID = od.ProductID``
+<br>
+İki tabloyu birleştirmenin diğer bir yolu ise left joindir. Sol tablonun hepsini alıp sağ ile birleştirir.
+<br>
 
-``Select * from Products p inner join [Order Details] od on p.ProductID = od.ProductID inner join Orders o on o.OrderID = od.OrderID``
+- ``Select * from Customers c left join Orders o on c.CustomerID = o.CustomerID where o.CustomerID is null``
+<br>
+Where komutu yine aynı çalışır. Örnek sorgu komutunda bütün müşterileri alıp orders tablosunda olmayanları yazdırmaktayız.
+<br>
+
+### Right join
+-  left join ile right join birbirlerine benzerler, sadece biri soldaki, diğeri sağdaki tablonun tamamını alır.
