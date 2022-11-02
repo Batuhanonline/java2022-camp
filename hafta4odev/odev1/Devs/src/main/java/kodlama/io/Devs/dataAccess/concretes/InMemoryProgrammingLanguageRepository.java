@@ -51,7 +51,7 @@ public class InMemoryProgrammingLanguageRepository implements ProgrammingLanguag
 
 	@Override
 	public ProgrammingLanguage addLanguage(ProgrammingLanguage language) {
-		languages.add(language);
+		languages.add(new ProgrammingLanguage(language.getId(), language.getName()));
 		return language;
 	}
 

@@ -35,7 +35,7 @@ public class ProgrammingLanguageController {
 	}
 	
 	//Post öğren öyle gel
-	@PostMapping("addlanguage")
+	@PostMapping("/add")
 	public ProgrammingLanguage addLanguage(@RequestBody ProgrammingLanguage newProgrammingLanguage) {
 		languageService.addLanguage(newProgrammingLanguage);
 		return newProgrammingLanguage;
